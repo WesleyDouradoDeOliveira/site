@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Rose Dourado - Especialista em estética facial e massagens SPA em São Paulo. Cuide da sua pele e bem-estar. Agende já!">
+<title>Rose Dourado Estética e Massagens - Massagens</title>
+<link rel="icon" href="img/icon.png" type="image/png" />
+<style>
+  /* Copiado o CSS do modelo para manter padrão */
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 999;
+    text-decoration: none;
+  }
+  .whatsapp-button:hover {
+    background-color: #1ebe57;
+  }
+  .whatsapp-button svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+  }
+  /* Reset básico */
+  * {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+body {
+  background: #fff8f2 url('img/icon.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #4d4d4d;
+  line-height: 1.6;
+  position: relative;
+}
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 248, 242, 0.6);
+    pointer-events: none;
+    z-index: -1;
+  }
+  a {
+    color: #7a4c1e;
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    color: #a97539;
+    outline: none;
+  }
+  a:focus, button:focus {
+    outline: 3px solid #a97539;
+    outline-offset: 2px;
+  }
+  nav a.active {
+    background: #a97539;
+    color: #fff;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  header {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #7a4c1e;
+    letter-spacing: 1.5px;
+  }
+  header .logo img {
+    height: 50px;
+    display: block;
+  }
+  nav {
+    display: flex;
+    gap: 25px;
+  }
+  nav a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  nav a:hover {
+    background: #f0d6b8;
+    color: #7a4c1e;
+  }
+  #menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #7a4c1e;
+  }
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+      background: #fff;
+      position: absolute;
+      top: 60px;
+      right: 15px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      z-index: 200;
+      width: 200px;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    nav.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    #menu-toggle {
+      display: block;
+    }
+  }
+
+  /* Seção de serviços */
+  section#massagens {
+    margin-top: 40px;
+  }
+  h2 {
+    color: #7a4c1e;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .services-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  .service-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  .service-item:hover,
+  .service-item:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 7px 22px rgb(0 0 0 / 0.15);
+  }
+  .service-item h3 {
+    color: #a97539;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .service-item p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.4;
+  }
+  .service-item .price {
+    color: #7a4c1e;
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 1.1rem;
+  }
+
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+    color: #4d4d4d;
+    font-size: 0.9em;
+  }
+  footer {
+  background-color: #7a4c1e; /* cor de fundo */
+  color: #f5e9d3;           /* cor do texto */
+  text-align: center;
+  padding: 35px 15px;
+  margin-top: 60px;
+  font-size: 0.9em;
+}
+footer a {
+  color: #f5e9d3;
+  font-weight: 700;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+  .btn-agende {
+  display: inline-block;
+  background-color: #a97539;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  box-shadow: 0 5px 10px rgba(169, 117, 57, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-agende:hover,
+.btn-agende:focus {
+  background-color: #7a4c1e; /* cor mais escura */
+  box-shadow: 0 7px 14px rgba(122, 76, 30, 0.6);
+  outline: none;
+}
+
+
+
+
+</style>
+</head>
+<body>
+<header class="container" role="banner">
+  <div class="logo">
+    <img src="img/rose dourado.png" alt="Rose Dourado" />
+  </div>
+  <!-- Botão hamburger -->
+  <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+  <nav id="main-nav" role="navigation" aria-label="Menu Principal">
+    <a href="index.html">Home</a>
+    <a href="estetica facial.html">Estética Facial</a>
+    <a href="massagens.html" class="active">Massagens</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="depoimentos.html">Depoimentos</a>
+    <a href="contato.html">Contato</a>
+    <a href="localizacao.html">Localizacao</a>
+  </nav>
+</header>
+
+<!-- Seção Massagens -->
+<section id="massagens" class="container" aria-labelledby="massagens-title">
+  <h2 id="massagens-title">Massagens</h2>
+  <div class="services-list" role="list">
+    <article class="service-item" role="listitem" tabindex="0">
+      <h3>Massagens SPA</h3>
+      <p>Massagens relaxantes, drenagem linfática e reflexologia para pés.</p>
+      <p class="price">R$ 150,00</p>
+    </article>
+
+    <article class="service-item" role="listitem" tabindex="0">
+      <h3>Massagem Modeladora</h3>
+      <p>Define o corpo e ajuda na redução de medidas.</p>
+      <p class="price">R$ 180,00</p>
+    </article>
+
+    <article class="service-item" role="listitem" tabindex="0">
+      <h3>Massagem Relaxante</h3>
+      <p>Alivia tensões e promove profundo relaxamento muscular.</p>
+      <p class="price">R$ 130,00</p>
+    </article>
+
+    <article class="service-item" role="listitem" tabindex="0">
+      <h3>Drenagem Linfática</h3>
+      <p>Auxilia na eliminação de líquidos e melhora a circulação.</p>
+      <p class="price">R$ 160,00</p>
+    </article>
+
+    <article class="service-item" role="listitem" tabindex="0">
+      <h3>Shiatsu</h3>
+      <p>Técnica japonesa para equilíbrio energético e alívio de dores.</p>
+      <p class="price">R$ 170,00</p>
+    </article>
+
+    <article class="service-item" role="listitem" tabindex="0">
+      <h3>Reflexologia</h3>
+      <p>Massagem nos pés que estimula pontos reflexos do corpo todo.</p>
+      <p class="price">R$ 140,00</p>
+    </article>
+
+    <article class="service-item" role="listitem" tabindex="0">
+  <h3>Massagem com Pedras Quentes</h3>
+  <p>Promove relaxamento profundo através do calor das pedras vulcânicas.</p>
+  <p class="price">R$ 190,00</p>
+</article>
+
+<article class="service-item" role="listitem" tabindex="0">
+  <h3>Massagem Ayurvédica</h3>
+  <p>Técnica indiana para harmonizar corpo, mente e emoções.</p>
+  <p class="price">R$ 200,00</p>
+</article>
+
+<article class="service-item" role="listitem" tabindex="0">
+  <h3>Massagem Tui Ná</h3>
+  <p>Massagem terapêutica chinesa para alívio de dores e tensão muscular.</p>
+  <p class="price">R$ 180,00</p>
+</article>
+
+<article class="service-item" role="listitem" tabindex="0">
+  <h3>Massagem Aromaterapia</h3>
+  <p>Relaxamento com óleos essenciais para equilíbrio emocional.</p>
+  <p class="price">R$ 160,00</p>
+</article>
+
+<article class="service-item" role="listitem" tabindex="0">
+  <h3>Massagem Desportiva</h3>
+  <p>Preparação e recuperação muscular para atletas e praticantes de esportes.</p>
+  <p class="price">R$ 190,00</p>
+</article>
+
+<article class="service-item" role="listitem" tabindex="0">
+  <h3>Massagem com Bambus</h3>
+  <p>Estimula circulação, modela o corpo e promove relaxamento.</p>
+  <p class="price">R$ 175,00</p>
+</article>
+
+  </div>
+</section>
+
+  </div>
+
+<div style="text-align: center; margin-top: 30px;">
+  <a href="https://wa.me/5511988605886" target="_blank" rel="noopener noreferrer" class="btn-agende">
+    Agende agora
+  </a>
+</div>
+</section>
+
+
+<footer>
+  <p>© 2025 Rose Dourado Estética e Massagens — Todos os direitos reservados.</p>
+  <p>Beleza, bem-estar e cuidado no site oficial de Rose Dourado</p>
+</footer>
+
+<!-- Botão WhatsApp -->
+<a href="https://wa.me/5511988605886?text=Olá,%20gostaria%20de%20mais%20informações" 
+   target="_blank" class="whatsapp-button" aria-label="WhatsApp">
+  
+  <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 
+      0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1
+      c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7
+      l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2
+      0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1
+      34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2
+      c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8
+      -3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3
+      1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5
+      -3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3
+      0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5
+      66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5
+      -5-3.9-10.5-6.6z"/>
+  </svg>
+</a>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+
+  menuToggle.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+    mainNav.classList.toggle('show');
+  });
+
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('show');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    const clickInside = mainNav.contains(event.target) || menuToggle.contains(event.target);
+    if (!clickInside && mainNav.classList.contains('show')) {
+      mainNav.classList.remove('show');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+</body>
+</html>
+

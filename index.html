@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Rose Dourado - Especialista em estética facial e massagens SPA em São Paulo. Cuide da sua pele e bem-estar. Agende já!">
+<title>Rose Dourado Estética e Massagens</title>
+<link rel="icon" href="img/icon.png" type="image/png" />
+<style>
+/* Reset básico */
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background: #a97539 url('img/icon.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #4d4d4d;
+  line-height: 1.6;
+  position: relative;
+  
+}
+/* Camada semi-transparente */
+  /* Camada semi-transparente sobre o fundo */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 248, 242, 0.6);
+    pointer-events: none;
+    z-index: -1;
+  }
+/* Links */
+a {
+  color: #7a4c1e;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #a97539;
+  outline: none;
+}
+/* Foco visível para acessibilidade */
+a:focus, button:focus {
+  outline: 3px solid #a97539;
+  outline-offset: 2px;
+}
+/* Link ativo do menu */
+  nav a.active {
+    background: #a97539;
+    color: #fff;
+  }
+
+/* Container centralizado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  
+}
+
+/* Header fixo */
+header {
+  background: rgba(255, 255, 255, 0.15); /* totalmente transparente */
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+header .logo {
+  margin-right: auto; /* empurra os outros elementos para a direita */
+}
+
+
+
+
+
+
+
+
+
+header > button#menu-toggle {
+  margin-left: auto;
+  margin-top: -60px; /* sobe 5 pixels, ajuste conforme desejar */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Logo */
+
+header .logo img {
+  height: 50px;
+  display: block;
+}
+header {
+  display: flex;
+  justify-content: flex-start; /* força tudo à esquerda */
+  align-items: center;
+}
+
+
+/* Menu de navegação */
+nav {
+  display: flex;
+  gap: 25px;
+}
+nav a {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+nav a:hover {
+  background: #f0d6b8;
+  color: #7a4c1e;
+}
+/* Botão hamburger mobile */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #7a4c1e;
+  height: 50px; /* mesma altura do logo */
+  line-height: 50px; /* centraliza verticalmente o texto */
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: 200;
+    width: 200px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  nav.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  #menu-toggle {
+    display: block;
+  }
+  /* Aqui a modificação para fixar o header no topo no mobile */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+background: rgba(248, 240, 230, 0.2);
+
+
+
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px;
+    z-index: 9999;
+  }
+  /* Ajuste para evitar conteúdo escondido atrás do header fixo */
+  body {
+    padding-top: 80px; /* ajuste conforme a altura do header */
+  }
+}
+
+
+
+/* Banner */
+.banner {
+  background: url('img/hidratacao.jpg') center/cover no-repeat;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 90px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  max-width: 700px;
+}
+/* Seções */
+section {
+  margin-bottom: 60px;
+}
+h2 {
+  color: #7a4c1e;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+.intro-text {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  font-size: 1.15rem;
+  color: #555;
+  text-align: center;
+}
+/* Serviços */
+.services-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+}
+.service-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.service-item:hover,
+.service-item:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 7px 22px rgb(0 0 0 / 0.15);
+}
+.service-item h3 {
+  color: #a97539;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.service-item p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+.service-item video {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background-color: #a97539;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  box-shadow: 0 5px 10px rgba(169, 117, 57, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #7a4c1e;
+  box-shadow: 0 7px 18px rgba(122, 76, 30, 0.6);
+  outline: none;
+}
+
+/* Rodapé */
+footer {
+  background: #7a4c1e;
+  color: #f5e9d3;
+  padding: 35px 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #f5e9d3;
+  font-weight: 700;
+}
+
+/* Scroll-margin para navegação interna */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  nav {
+    justify-content: center;
+    gap: 15px;
+  }
+  .banner h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .service-item:hover,
+  .service-item:focus-within {
+    transform: none;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  }
+  .testimonial-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .testimonial-item img {
+    margin-bottom: 10px;
+  }
+}
+
+/* ===========================
+ SEÇÃO DE DEPOIMENTOS E HORÁRIOS
+=========================== */
+
+/* Container dos depoimentos com barra de rolagem */
+.testimonials {
+  max-width: 720px;
+  margin: 0 auto 40px auto;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+}
+
+/* Cada depoimento */
+.testimonial-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  padding: 20px 25px;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 0.12);
+  font-style: italic;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.testimonial-item p {
+  margin: 0;
+  flex: 1;
+  text-align: justify;
+}
+
+/* Horário centralizado no quadro */
+.testimonial-item strong {
+  display: block;
+  margin-top: 8px;
+  color: #a97539;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Quadro dos horários */
+.schedule {
+  max-width: 350px;
+  margin: 0 auto 60px auto;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  text-align: center;
+}
+
+.schedule h3 {
+  margin-bottom: 15px;
+  color: #7a4c1e;
+}
+
+.schedule p {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #444;
+}
+
+.schedule small {
+  color: #666;
+}
+
+/* Botão WhatsApp fixo */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+  text-decoration: none;
+}
+.whatsapp-button:hover {
+  background-color: #1ebe57;
+}
+.whatsapp-button svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+</style>
+</head>
+
+
+
+
+
+
+
+<body>
+<header class="container" role="banner">
+  <div class="logo">
+    <img src="img/rose dourado.png" alt="Rose Dourado" />
+  </div>
+  <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+  <nav id="main-nav" role="navigation" aria-label="Menu Principal">
+    <a href="index.html">Home</a>
+    <a href="estetica facial.html">Estética Facial</a>
+    <a href="massagens.html">Massagens</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="depoimentos.html">Depoimentos</a>
+    <a href="contato.html" >Contato</a>
+    <a href="localizacao.html">Localização</a>
+  </nav>
+</header>
+
+
+
+
+
+
+
+
+
+
+<main>
+
+
+
+<!-- Botão WhatsApp fixo -->
+<a href="https://wa.me/5511988605886" target="_blank" rel="noopener noreferrer" class="whatsapp-button" aria-label="Contato WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M20.52 3.48A11.92 11.92 0 0012 0C5.37 0 0 5.37 0 12a11.91 11.91 0 0016.95 11.54l3.28.82-.82-3.28A11.92 11.92 0 0024 12c0-3.2-1.26-6.21-3.48-8.52zm-8.4 17.34a8.42 8.42 0 01-4.55-1.38l-.32-.2-3 1 1-3-.2-.32a8.42 8.42 0 011.38-4.55 8.49 8.49 0 016.74-3.93 8.5 8.5 0 016 2.5 8.53 8.53 0 012.5 6 8.49 8.49 0 01-3.93 6.74zM17 14.8c-.28-.14-1.67-.82-1.93-.92-.26-.1-.45-.14-.64.14s-.74.92-.9 1.11-.33.21-.6.07a6.62 6.62 0 01-2-1.22 7.71 7.71 0 01-1.43-1.78c-.15-.26 0-.4.12-.54.12-.13.26-.34.39-.51.13-.17.17-.28.26-.46.09-.18.05-.33-.02-.47s-.63-1.52-.87-2.08c-.23-.54-.46-.46-.64-.47-.17 0-.36-.02-.55-.02s-.5.07-.76.35a3.23 3.23 0 00-1 2.45c0 1.44 1.18 2.83 1.34 3.03s2.31 3.53 5.59 4.95a9.84 9.84 0 002.3.98 3.55 3.55 0 001.66.16 2.64 2.64 0 001.75-1.62c.15-.28.15-.52.1-.72-.05-.2-.18-.33-.36-.47z"/>
+  </svg>
+</a>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+      mainNav.classList.toggle('show');
+    });
+
+    const navLinks = mainNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('show');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    // Ativa o link conforme a página atual (URL)
+    const currentPage = window.location.pathname.split('/').pop();
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  }
+</script>
+
+
+
+</header>
+<main>
+  <section class="banner" role="img" aria-label="Banner de estética e beleza com chamada para agendamento">
+    <div>
+      <h1>Especialista em Estética Facial e Massagens padrão de SPA</h1>
+      <br><br>
+  <div style="text-align: center; margin-top: 30px;">
+      <a href="https://wa.me/5511988605886" target="_blank" rel="noopener noreferrer" class="cta-button">
+        Agende agora
+    </a>
+
+    </div>
+  </section>
+<section id="sobre" class="container" aria-labelledby="sobre-title">
+<!-- Seção Serviços com dois blocos -->
+<section id="servicos" class="container" style="padding: 20px; text-align: center;">
+  <h2 style="font-size: 2em; margin-bottom: 30px;">Serviços</h2>
+
+  <div class="servicos-opcoes" style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  ">
+    <!-- Estética Facial -->
+    <div class="servico-bloco" style="
+      flex: 1 1 250px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    ">
+      <img src="img/estetica.png" alt="Estética Facial" style="width: 100px; margin-bottom: 15px;">
+      <h3 style="color: #7a4c1e;">Estética Facial</h3>
+      <br>
+      <p>Conheça todos os tratamentos para o rosto e a pele.</p>
+      <br>
+      <a href="estetica facial.html" class="cta-button">Ver serviços</a>
+    </div>
+    <!-- Massagens -->
+    <div class="servico-bloco" style="
+      flex: 1 1 250px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    ">
+      <img src="img/estetica.png" alt="Massagens" style="width: 100px; margin-bottom: 15px;">
+      <h3 style="color: #7a4c1e;">Massagens</h3>
+      <br>
+      <p>Veja todas as massagens disponíveis para seu bem-estar.</p>
+      <br>
+      <a href="massagens.html" class="cta-button">Ver serviços</a>
+    </div>
+  </div>
+</section>
+<!-- Fim Seção Serviços -->
+  </div>
+  <br>
+  <div style="text-align: center; margin-top: 30px;">
+      <a href="https://wa.me/5511988605886" target="_blank" rel="noopener noreferrer" class="cta-button">
+         Agende agora
+    </a>
+  </div>
+</section>
+<section id="horario" class="container" aria-labelledby="horario-title">
+  <h2 id="horario-title">Horário de Funcionamento</h2>
+  <div class="schedule" style="max-width: 420px; padding: 25px 30px;">
+    <p><strong style="color: #7a4c1e; white-space: nowrap;">Atendimento somente com horário marcado.</strong></p>
+    <p><strong>Domingo:</strong> Fechado</p>
+    <p><strong>Segunda-feira:</strong> Fechado</p>
+    <p><strong>Terça-feira:</strong> 09:00–18:00</p>
+    <p><strong>Quarta-feira:</strong> 09:00–18:00</p>
+    <p><strong>Quinta-feira:</strong> 09:00–18:00</p>
+    <p><strong>Sexta-feira:</strong> 09:00–18:00</p>
+    <p><strong>Sábado:</strong> 09:00–18:00</p>
+  </div>
+</section>
+<section id="depoimentos" class="container" aria-labelledby="depoimentos-title">
+  <h2 id="depoimentos-title">Depoimentos</h2>
+  <div class="testimonials" role="list">
+
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/roselâine.png" alt="Foto de Roselâine Dourado" 
+         style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">
+      - Roselâine Dourado
+    </strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente
+    </div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">
+    "Sou cliente, nunca fiz massagem, ganhei dos dias das mães, hoje foi minha primeira vez, estou estressada, nervosa, até com palpitação no coração quando cheguei. Após o procedimento e o lugar aconchegante e chique, saiu fluente, sem dores, e calma, dormi que até Adorei recomendo e vou marcar minha próxima, vale a pena corre lá pessoal. É um momento seu e único e esplêndido. Parabéns Roseli.👏😍🤩"
+  </p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/karen.png" alt="Foto de Karen Araujo"
+         style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">
+      - Karen Araujo
+    </strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente
+    </div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">
+    "Hoje foi minha primeira experiência com a Rose e simplesmente amei, fiz uma limpeza de pele e o resultado foi melhor que o esperado. Minha pele ficou ótima e com um brilho maravilhoso. Fora o profissionalismo dela que é espetacular e que você vê que entende ela sobre o que está falando. Um ótimo atendimento e dedicação. Recomendo a todos."
+  </p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/elaine.png" alt="Foto de Elaine Felício"
+         style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">
+      - Elaine Felício
+    </strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente
+    </div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">
+    "Hoje tive o prazer de conhecer pessoalmente e fazer uma massagem relaxante com essa Profissional Maravilhosa que nos acolhe com tanta atenção e carinho. Super indico, mãozinhas de fada 🧚‍♀️🩷🩷🩷🩷"
+  </p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/caroline.png" alt="Foto de Caroline Costa"
+         style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">
+      - Caroline Costa
+    </strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente
+    </div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">
+    "Uma sensação incrível, gostaria de ir todos os dias, massagem extraordinária, lugar aconchegante e acolhedor, Ro.. você arrasa! ❤️"
+  </p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/taynara.png" alt="Foto de Taynara Carli"
+         style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">
+      - Taynara Carli
+    </strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente
+    </div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">
+    "Incrível, maravilhosa! Ganhei de presente e me senti extremamente especial de ganhar uma experiência tão única, digo experiência porque é mágico o que a Rose oferece. Gratidão por tanto estou encantada 🩷"
+  </p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/ivonete.png" alt="Foto de Ivonete Brito"
+         style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">
+      - Ivonete Brito
+    </strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente
+    </div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">
+    "Experiência maravilhosa! Super profissional e habilidosa! Pretendo voltar em breve. Super recomendo."
+  </p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/andressa.png" alt="Foto de Andressa Deamo Lima Alves"
+         style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">
+      - Andressa Deamo Lima Alves
+    </strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente
+    </div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">
+    "Fiz alguns procedimentos com a Rose Dourado, hidratação facial, tratamento para olheiras, massagem relaxante e alta frequência para cicatrização de piercing, e posso afirmar que além do conhecimento que ela tem, ama o que faz, por isso todos tiveram resultados. O ambiente que é feito os procedimentos é maravilhoso, agradável, extremamente limpo e cheiroso. Ela é uma profissional completa, vale a pena passar pelas mãos dela."
+  </p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/giulia.png" alt="Foto de Giulia Christine" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Giulia Christine</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Atendimento maravilhoso! A Rose não apenas cuida da minha pele com a limpeza e peelings, mas fazendo um tratamento de dentro pra fora, tratando a flora intestinal causadora da inflamação na minha pele (acnes), indicando produtos, remédios e cremes! Tratamento completo.. recomendo 😁"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/mayara.png" alt="Foto de Mayara Leal" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Mayara Leal</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"AMEI! O ambiente, a Rose e seu profissionalismo como, sem dúvidas, o resultado do meu tratamento estético: 'Pele de Mulher Rica'. Recomendo."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/maria.png" alt="Foto de Maria da Conceição Alves" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Maria da Conceição Alves</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Con, obrigada por sua confiança. Estou muito feliz por você estar gostando, gratidão imensa 😍❤️"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/edenise.png" alt="Foto de Edenise Rodrigues" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Edenise Rodrigues</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Profissional maravilhosa! Super indico. Estou tendo uma experiência maravilhosa com ela!! O atendimento é incrível!! Parabéns Rose, continue sempre assim!! 🙏👏👏❤️🥰😘😘"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/aline.png" alt="Foto de Aline" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Aline</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Excelente profissional! Rose Dourado faz jus à profissão massoterapeuta, promove cura e bem-estar através das técnicas aplicadas e ambiente com qualidade de Spa."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/thiago.png" alt="Foto de Thiago Santana" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Thiago Santana</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Sou cliente semanal. Investimento em bem estar que trás retorno garantido! Excelente profissional, em pé de igualdade com famosos spas de São Paulo."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/eduarda.png" alt="Foto de Eduarda Lima" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Eduarda Lima</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Simplesmente perfeita! Fiz a massagem relaxante e foi uma experiência incrível. A Rose tem um atendimento impecável. Parabéns pelo profissionalismo."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/laís.png" alt="Foto de Laís Giovanna" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Laís Giovanna</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Sensacional! Rose é uma excelente profissional 😊"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/camila.png" alt="Foto de Camila Varago" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Camila Varago</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"A Rose é uma profissional maravilhosa que segue um protocolo incrível! Vale muito a pena ter o seu momento de autocuidado com ela!"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/núbia.png" alt="Foto de Núbia Bertolino" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Núbia Bertolino</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Olha, foi além das minhas expectativas, já tinha realizado drenagem algumas vezes, mas não chegou nem perto das mãos da Rose. Que além de tirar toda minha retenção ainda me deixou relaxada.. obrigada."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/regiane.png" alt="Foto de Regiane Dantas" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Regiane Dantas</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Excelente profissional, sai com a pele linda após a limpeza de pele. Simplesmente maravilhosa 😍"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/claudia.png" alt="Foto de Claudia Lemos de Oliveira" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Claudia Lemos de Oliveira</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Atendimento de excelência. Fiz uma massagem relaxante. Simplesmente perfeita."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/daniel.png" alt="Foto de Daniel Martins" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Daniel Martins</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Ótimo serviço. Atendeu as minhas expectativas. Recomendo para quem tá precisando dar um descanso pro corpo e relaxar..."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/paulo.png" alt="Foto de Paulo Rogério Brandão" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Paulo Rogério Brandão</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Fiz uma limpeza de pele e foi excelente o resultado, sem dizer que a oleosidade da pele desapareceu. Super indico os trabalhos dela, excelente profissional."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/mariana.png" alt="Foto de Mariana Passamani" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Mariana Passamani</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Excelente experiência! Profissional sensacional e que te proporciona uma verdadeira imersão no processo terapêutico."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/daniel.png" alt="Foto de Daniel Ramos" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Daniel Ramos</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Massagista excelente, saímos de lá muito renovados. A melhor reflexologia!!!"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/wagner.png" alt="Foto de Wagner Ferreira" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Wagner Ferreira</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Superou minhas expectativas. Excelente atendimento. Ótimo ambiente. Simpatia. Me senti especial. Parabéns Rose Dourado!"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/fabio.png" alt="Foto de Fabio Gomes" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Fabio Gomes</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Sensacional, super recomendo… dedicada, experimente simplesmente fantástica, nota 1000."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/katia.png" alt="Foto de Katia Amorim" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Katia Amorim</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Profissional excelente, meu tratamento foi um sucesso, produtos de qualidade. Eu recomendo."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/keller.png" alt="Foto de Keller Oliveira" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Keller Oliveira</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Excelente profissional, atenciosa, dedicada, prestativa e trabalha com ótimos produtos, super indico."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/vitor.png" alt="Foto de Vitor Dantas" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Vitor Dantas</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Excelente profissional, super confiável e entrega muitooo resultado."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/michel.png" alt="Foto de Michel Caramelo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Michel Caramelo</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Super profissional! Experiência incrível! Recomendo!"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/maria.png" alt="Foto de Maria Vargas Leão Vargas Leão" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Maria Vargas Leão Vargas Leão</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Super profissional! Recomendo de olhos fechados⭐️"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/elias.png" alt="Foto de Elias Oliveira" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Elias Oliveira</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Ótima profissional!"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/francisco.png" alt="Foto de Francisco Perinni" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Francisco Perinni</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Ótimo atendimento, super recomendo."</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/renata.png" alt="Foto de Renata S" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Renata S</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+  <p style="font-style: italic; line-height: 1.4; text-align: center; max-width: 700px; margin: 0 auto; font-size: 0.9em;">"Sem dúvidas a melhor da região!"</p>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/thiagoo.png" alt="Foto de Thiago Barbosa" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Thiago Barbosa</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/viviane.png" alt="Foto de Viviane Hoffman" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Viviane Hoffman</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+</blockquote>
+<blockquote class="testimonial-item" role="listitem" tabindex="0" style="max-width: 800px; margin: auto;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="img/juliana.png" alt="Foto de Juliana Gonçalves" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+    <strong style="color: #000; font-weight: 600; font-size: 0.9em;">- Juliana Gonçalves</strong>
+    <div aria-label="Avaliação do cliente" style="color: #f5c518; font-size: 1em; font-weight: bold;">⭐⭐⭐⭐⭐ Excelente</div>
+  </div>
+</blockquote>
+  </div>
+</section>
+<section id="contato" class="container" aria-labelledby="contato-title">
+  <h2 id="contato-title">Localização</h2>
+  <div class="contact-info" style="line-height: 1.4; max-width: 800px; margin: 0 auto; text-align: left;">
+    <p style="margin-bottom: 10px;">
+
+     <a href="https://www.google.com/maps/dir//Comercial+-+Av.+Sat%C3%A9lite,+130+-+Jd+Santa+B%C3%A1rbara,+S%C3%A3o+Paulo+-+SP,+08330-480/@-23.613757,-46.552449,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ce67a48efc178b:0x4fdb66de2f4dfb0f!2m2!1d-46.4700795!2d-23.6137034?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" 
+       target="_blank" 
+       style="color: #7a4c1e; font-weight: bold; text-decoration: none;">
+      Av. Satélite, 130 - Jd Santa Bárbara, São Paulo - SP, 08330-480
+    <br>
+    
+    </p>
+    <div style="max-width: 800px; margin: 0 auto 20px;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.73657139823!2d-46.4700474!3d-23.613778699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce67a48efc178b%3A0x4fdb66de2f4dfb0f!2sRose%20Dourado%20Est%C3%A9tica%20e%20Massagens%20padr%C3%A3o%20de%20spa!5e0!3m2!1spt-BR!2sbr!4v1751909002888!5m2!1spt-BR!2sbr" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa Rose Dourado Estética e Massagens">
+      </iframe>
+    </div>
+    <br>
+
+<br>
+      <h2 id="contato-title">Contato</h2>
+
+<p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+    <path d="M20.52 3.48A11.875 11.875 0 0012 0C5.373 0 0 5.373 0 12a11.873 11.873 0 001.737 6.02L0 24l6.29-1.654A11.866 11.866 0 0012 24c6.627 0 12-5.373 12-12a11.897 11.897 0 00-3.48-8.52zM12 21.93a9.926 9.926 0 01-5.184-1.463l-.372-.22-3.73.981.996-3.636-.242-.375A9.908 9.908 0 012.07 12c0-5.46 4.44-9.9 9.9-9.9a9.91 9.91 0 019.9 9.9c0 5.46-4.44 9.9-9.9 9.9zm5.187-7.712c-.286-.143-1.693-.837-1.957-.932-.263-.096-.455-.143-.647.143-.19.286-.735.932-.9 1.123-.166.19-.333.214-.62.072-.286-.143-1.207-.444-2.3-1.416-.85-.758-1.423-1.695-1.59-1.981-.166-.286-.018-.44.124-.583.128-.127.286-.333.43-.5.143-.166.19-.286.286-.476.095-.19.048-.357-.024-.5-.072-.143-.647-1.56-.886-2.14-.232-.562-.47-.485-.647-.494l-.552-.01c-.19 0-.5.072-.76.357s-1 1-1 2.43c0 1.43 1.025 2.812 1.168 3.008.143.19 2.02 3.083 4.9 4.318.684.295 1.217.47 1.633.602.684.218 1.308.187 1.8.114.549-.08 1.693-.69 1.933-1.356.238-.666.238-1.237.166-1.356-.072-.095-.263-.143-.55-.286z"/>
+  </svg>
+  <a href="https://wa.me/5511988605886" target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 700; font-size: 1.1rem;">
+    Clique aqui no WhatsApp: (11) 98860-5886
+  </a>
+</p>
+<br>
+<p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" fill="#E4405F" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.976 1.248 2.243 1.31 3.608.058 1.266.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.335 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.335-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.335-2.633 1.31-3.608.975-.975 2.242-1.248 3.608-1.31C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.736 0 8.332.012 7.052.07 5.771.127 4.56.425 3.465 1.52 2.37 2.615 2.072 3.826 2.015 5.107.957 6.387.945 6.79.945 10.053c0 3.265.012 3.669.07 4.948.057 1.281.355 2.492 1.45 3.587 1.095 1.095 2.306 1.393 3.587 1.45 1.279.058 1.683.07 4.948.07 3.263 0 3.667-.012 4.946-.07 1.281-.057 2.492-.355 3.587-1.45 1.095-1.095 1.393-2.306 1.45-3.587.058-1.279.07-1.683.07-4.948 0-3.263-.012-3.667-.07-4.946-.057-1.281-.355-2.492-1.45-3.587C19.438.425 18.227.127 16.946.07 15.666.012 15.263 0 12 0z"/>
+    <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998z"/>
+    <circle cx="18.406" cy="5.594" r="1.44"/>
+  </svg>
+  <a href="https://www.instagram.com/rosedouradoestetica/" target="_blank" rel="noopener noreferrer" style="color: #E4405F; font-weight: 700; font-size: 1.1rem;">
+    Clique aqui no Instagram: @rosedouradoestetica
+  </a>
+</p>
+<br>
+<p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" fill="#1877F2" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 
+    24h11.495v-9.294H9.691V11.01h3.129V8.414c0-3.1 1.893-4.788 
+    4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.918.001c-1.504 
+    0-1.797.716-1.797 1.767v2.316h3.587l-.467 3.696h-3.12V24h6.116c.73 
+    0 1.324-.593 1.324-1.324V1.325C24 .593 23.407 0 22.675 0z"/>
+  </svg>
+  <a href="https://www.facebook.com/profile.php?id=100089683946160" target="_blank" rel="noopener noreferrer" style="color: #1877F2; font-weight: 700; font-size: 1.1rem;">
+    Clique aqui no Facebook: Rose Dourado Estetica
+  </a>
+</p>
+
+
+<br><br>
+      
+    
+  <form id="contato-form" style="max-width: 800px; margin: 0 auto;">
+  <label for="nome" style="display:block; margin-bottom:5px; font-weight:bold;">Nome:</label>
+  <input type="text" id="nome" name="nome" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
+  <label for="telefone" style="display:block; margin-bottom:5px; font-weight:bold;">Telefone:</label>
+  <input type="tel" id="telefone" name="telefone" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
+  <label for="servico" style="display:block; margin-bottom:5px; font-weight:bold;">Qual serviço você deseja?</label>
+  <select id="servico" name="servico" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
+    <option value="" selected>Nenhum selecionado</option>
+    <option value="estetica_facial">Estética Facial</option>
+    <option value="massagem_drenagem">Massagem Drenagem</option>
+    <option value="massagem_shiatsu">Massagem Shiatsu</option>
+    <option value="reflexologia">Reflexologia</option>
+    <option value="outro">Outro</option>
+  </select>
+  <label for="atendimento" style="display:block; margin-bottom:5px; font-weight:bold;">Como prefere ser atendido?</label>
+  <select id="atendimento" name="atendimento" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
+    <option value="" selected>Nenhum selecionado</option>
+    <option value="presencial">Presencial</option>
+    <option value="online">Online</option>
+    <option value="telefonico">Telefone</option>
+  </select>
+  <label for="horario" style="display:block; margin-bottom:5px; font-weight:bold;">Melhor horário para contato:</label>
+  <select id="horario" name="horario" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
+    <option value="" selected>Nenhum selecionado</option>
+    <option value="manha_8_12">Manhã (08:00 - 12:00)</option>
+    <option value="tarde_12_18">Tarde (12:00 - 18:00)</option>
+    <option value="noite_18_21">Noite (18:00 - 21:00)</option>
+    <option value="qualquer_horario">Qualquer horário</option>
+  </select>
+  <label for="conheceu" style="display:block; margin-bottom:5px; font-weight:bold;">Como conheceu nossos serviços?</label>
+  <select id="conheceu" name="conheceu" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
+    <option value="" selected>Nenhum selecionado</option>
+    <option value="instagram">Instagram</option>
+    <option value="facebook">Facebook</option>
+    <option value="indicação">Indicação</option>
+    <option value="google">Google / Pesquisa</option>
+    <option value="outro">Outro</option>
+  </select>
+  <label for="mensagem" style="display:block; margin-bottom:5px; font-weight:bold;">Mensagem:</label>
+  <textarea id="mensagem" name="mensagem" rows="4" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;"></textarea>
+    <button type="submit" style="background-color:#7a4c1e; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer;">
+      Enviar
+    </button>
+  </form>
+<br><br>          
+
+<br><br>
+  </div>
+</section>
+<a href="https://wa.me/5511988605886?text=Olá,%20gostaria%20de%20mais%20informações" 
+   target="_blank" class="whatsapp-button" aria-label="WhatsApp">
+  
+  <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 
+      0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1
+      c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7
+      l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2
+      0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1
+      34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2
+      c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8
+      -3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3
+      1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5
+      -3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3
+      0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5
+      66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5
+      -5-3.9-10.5-6.6z"/>
+  </svg>
+</a>
+<footer>
+  <p>© 2025 Rose Dourado Estética e Massagens — Todos os direitos reservados.</p>
+  <p>Beleza, bem-estar e cuidado no site oficial de Rose Dourado</p>
+</footer>
+  <!-- SEUS SCRIPTS -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- SCRIPT DO FORMULÁRIO PARA WHATSAPP -->
+<script>
+  const form = document.getElementById('contato-form');
+  if (form) {
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const servico = document.getElementById('servico').value;
+      const atendimento = document.getElementById('atendimento').value;
+      const horario = document.getElementById('horario').value;
+      const conheceu = document.getElementById('conheceu').value;
+      const mensagem = document.getElementById('mensagem').value.trim();
+      const numeroWhats = '5511988605886'; // substitua pelo seu número com DDD e código do país
+      const texto = 
+`Olá, gostaria de mais informações:
+Nome: ${nome || 'não informado'}
+Telefone: ${telefone || 'não informado'}
+Serviço: ${servico || 'não selecionado'}
+Atendimento: ${atendimento || 'não selecionado'}
+Horário: ${horario || 'não selecionado'}
+Como conheceu: ${conheceu || 'não selecionado'}
+Mensagem: ${mensagem || 'nenhuma'}`;
+      const url = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    });
+  }
+</script>
+</body>
+</html>
