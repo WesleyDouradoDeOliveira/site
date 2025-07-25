@@ -2,33 +2,11 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Rose Dourado - Especialista em estética facial e massagens SPA em São Paulo. Cuide da sua pele e bem-estar. Agende já!">
-<meta name="keywords" content="estética facial, massagens, SPA, São Paulo, Rose Dourado">
-<meta name="author" content="Rose Dourado">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Rose Dourado Estética e Massagens - Localização" />
-<meta property="og:description" content="Venha nos visitar no nosso espaço acolhedor no coração de São Paulo. Agende já!" />
-<meta property="og:image" content="https://seusite.com/img/rose-dourado.png" />
-<meta property="og:url" content="https://seusite.com/localizacao.html" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-
-<title>Rose Dourado Estética e Massagens - Localização</title>
-
-<!-- Favicon -->
+<title>Rose Dourado Estética e Massagens</title>
 <link rel="icon" href="img/icon.png" type="image/png" />
-<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
-
 <style>
-
-  
-  /* Seu CSS padrão */
-
   .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -54,6 +32,7 @@
     fill: white;
   }
 
+  /* Reset básico */
   * {
     margin: 0; 
     padding: 0; 
@@ -69,6 +48,7 @@ body {
   position: relative;
 }
 
+  /* Camada semi-transparente sobre o fundo */
   body::before {
     content: "";
     position: fixed;
@@ -79,33 +59,37 @@ body {
     z-index: -1;
   }
 
+  /* Links */
   a {
     color: #7a4c1e;
     text-decoration: none;
   }
-
   a:hover,
   a:focus {
     color: #a97539;
     outline: none;
   }
 
+  /* Acessibilidade: foco visível em links e botões */
   a:focus, button:focus {
     outline: 3px solid #a97539;
     outline-offset: 2px;
   }
 
+  /* Link ativo do menu */
   nav a.active {
     background: #a97539;
     color: #fff;
   }
 
+  /* Container principal para centralizar e limitar largura */
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
   }
 
+  /* Header fixo e estilizado */
   header {
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(4px);
@@ -119,23 +103,23 @@ body {
     justify-content: space-between;
   }
 
+  /* Logo */
   header .logo {
     font-size: 28px;
     font-weight: 700;
     color: #7a4c1e;
     letter-spacing: 1.5px;
   }
-
   header .logo img {
     height: 50px;
     display: block;
   }
 
+  /* Menu de navegação */
   nav {
     display: flex;
     gap: 25px;
   }
-
   nav a {
     font-weight: 600;
     text-transform: uppercase;
@@ -144,12 +128,12 @@ body {
     border-radius: 5px;
     transition: background 0.3s ease;
   }
-
   nav a:hover {
     background: #f0d6b8;
     color: #7a4c1e;
   }
 
+  /* Botão hamburger para mobile */
   #menu-toggle {
     display: none;
     background: none;
@@ -159,6 +143,7 @@ body {
     color: #7a4c1e;
   }
 
+  /* Estilos para telas menores */
   @media (max-width: 768px) {
     nav {
       flex-direction: column;
@@ -173,51 +158,20 @@ body {
       box-shadow: 0 5px 10px rgba(0,0,0,0.1);
       z-index: 200;
       width: 200px;
+
       opacity: 0;
       transform: translateY(-10px);
       pointer-events: none;
       transition: all 0.3s ease;
     }
-
     nav.show {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
     }
-
     #menu-toggle {
       display: block;
     }
-  }
-
-  .btn-agende {
-    display: inline-block;
-    background-color: #a97539;
-    color: #fff;
-    font-weight: 700;
-    padding: 12px 28px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    letter-spacing: 1.5px;
-    box-shadow: 0 5px 10px rgba(169, 117, 57, 0.4);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-  }
-.btn-agende {
-  margin-bottom: -50px; /* Espaço embaixo do botão */
-}
-
-
-
-  .btn-agende:hover,
-  .btn-agende:focus {
-    background-color: #7a4c1e;
-    box-shadow: 0 7px 14px rgba(122, 76, 30, 0.6);
-    outline: none;
   }
 
   footer {
@@ -228,85 +182,94 @@ body {
     font-size: 0.9rem;
     margin-top: 50px;
   }
-
   footer a {
     color: #f5e9d3;
     font-weight: 700;
   }
 
-  h2 {
-    color: #7a4c1e;
-    font-size: 2.4rem;
-    margin-bottom: 30px;
-    font-weight: 700;
-    text-align: center;
-  }
+/* Estilo dos depoimentos */
+#depoimentos h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #7a4c1e;
+}
+.testimonials {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.testimonial-item {
+  background: #f9f2e9;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: 15px auto; /* aumenta a margem para espaçar entre os blocos */
+  border: 2px solid #e0d2c1;
+  box-sizing: border-box;
+}
 
-  /* Estilo do mapa */
-  #map {
-    max-width: 800px;
-    width: 100%;
-    height: 450px;
-    margin: 0 auto 30px auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
+/* Garante um espaço maior entre os blocos */
+.testimonial-item + .testimonial-item {
+  margin-top: 30px;
+}
 
-  .info {
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: #4d4d4d;
-  }
+.testimonial-item div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+.testimonial-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimonial-text {
+  font-style: italic;
+  font-size: 1.05em;
+  color: #3e3e3e;
+  text-align: center;
+}
 
-  /* Formulário dúvidas rápidas */
-  form {
-    max-width: 500px;
-    margin: 0 auto 40px auto;
-  }
 
-  form label {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 5px;
-    color: #7a4c1e;
-  }
+/* Botão "Agende agora" */
+ .btn-agende {
+  display: inline-block;
+  background-color: #a97539;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  box-shadow: 0 5px 10px rgba(169, 117, 57, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
 
-  form input[type="text"],
-  form input[type="email"],
-  form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: inherit;
-  }
+/* E para o hover: */
+.btn-agende:hover,
+.btn-agende:focus {
+  background-color: #7a4c1e; /* cor mais escura para o efeito */
+  box-shadow: 0 7px 14px rgba(122, 76, 30, 0.6);
+  outline: none;
+}
 
-  /* Botão voltar ao topo */
-  #btn-topo {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    display: none;
-    background: #7a4c1e;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    z-index: 999;
-    font-size: 24px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 40px;
-  }
 </style>
 </head>
+
+
+
+
+
+
 
 <body>
 <header class="container" role="banner">
@@ -320,82 +283,105 @@ body {
     <a href="massagens.html">Massagens</a>
     <a href="sobre.html">Sobre</a>
     <a href="depoimentos.html">Depoimentos</a>
-    <a href="contato.html" class="active">Contato</a>
+    <a href="contato.html" >Contato</a>
     <a href="localizacao.html">Localização</a>
   </nav>
 </header>
 
-<div style="height: 30px;"></div>
-
-
-<section id="contato" class="container" aria-labelledby="contato-title"><div style="text-align: center; font-size: 1.3rem;"></div>
-  <h2 id="contato-title">Contato</h2>
-  
-
-<div style="text-align: center; font-size: 1.3rem;">
-  <p>Estamos aqui para ajudar você! Entre em contato conosco pelos canais abaixo:</p>
-  <br>
-  <div style="max-width: 300px; margin: 0 auto;">
-  <address style="text-align: left; font-size: 20px;">
-    <div style="white-space: nowrap;">
-      <strong>Telefone:</strong> <a href="tel:+5511988605886">(11) 98860-5886</a>
-    </div>
-    <div style="white-space: nowrap;">
-      <strong>E-mail:</strong> <a href="mailto:contato@rosedourado.com.br">contato@rosedourado.com.br</a>
-    </div>
-    <div style="white-space: nowrap;">
-      <strong>Endereço:</strong> Rua Exemplo, 123 - São Paulo, SP
-    </div>
-    <div style="white-space: nowrap;">
-      <strong>WhatsApp:</strong> <a href="https://wa.me/5511988605886" target="_blank" rel="noopener noreferrer">(11) 98860-5886</a>
-<br><br>
-        <div style="text-align: center; margin-top: 30px;">
-    <a href="https://wa.me/5511988605886" target="_blank" rel="noopener noreferrer" class="btn-agende">
-      Agende agora
-    </a>
-  </div>
-    </div>
-  </address>
-</div>
-
-<br><br><br>
 
 
 
-<div style="display: center; justify-content: flex-start; margin-top: -3rem;">
-  <h1 style="color: #7a4c1e; font-size: 2.5rem; font-weight: 600;">
-    Siga-nos nas redes sociais:
-  </h1>
-</div>
 
-<br>
+
+<section id="contato" class="container" aria-labelledby="contato-title" style="font-size: 1.1em; line-height: 1.8;">
+  <h2 id="contato-title" style="font-size: 2.2rem; text-align: center; color: #7a4c1e; margin: 40px 0 40px 0;">Contato</h2>
+
+  <div class="testimonials" role="list" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px;">
+
+
+
+
+
+
+
+<main>
+
+
+
+<!-- Botão WhatsApp fixo -->
+<a href="https://wa.me/5511988605886" target="_blank" rel="noopener noreferrer" class="whatsapp-button" aria-label="Contato WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M20.52 3.48A11.92 11.92 0 0012 0C5.37 0 0 5.37 0 12a11.91 11.91 0 0016.95 11.54l3.28.82-.82-3.28A11.92 11.92 0 0024 12c0-3.2-1.26-6.21-3.48-8.52zm-8.4 17.34a8.42 8.42 0 01-4.55-1.38l-.32-.2-3 1 1-3-.2-.32a8.42 8.42 0 011.38-4.55 8.49 8.49 0 016.74-3.93 8.5 8.5 0 016 2.5 8.53 8.53 0 012.5 6 8.49 8.49 0 01-3.93 6.74zM17 14.8c-.28-.14-1.67-.82-1.93-.92-.26-.1-.45-.14-.64.14s-.74.92-.9 1.11-.33.21-.6.07a6.62 6.62 0 01-2-1.22 7.71 7.71 0 01-1.43-1.78c-.15-.26 0-.4.12-.54.12-.13.26-.34.39-.51.13-.17.17-.28.26-.46.09-.18.05-.33-.02-.47s-.63-1.52-.87-2.08c-.23-.54-.46-.46-.64-.47-.17 0-.36-.02-.55-.02s-.5.07-.76.35a3.23 3.23 0 00-1 2.45c0 1.44 1.18 2.83 1.34 3.03s2.31 3.53 5.59 4.95a9.84 9.84 0 002.3.98 3.55 3.55 0 001.66.16 2.64 2.64 0 001.75-1.62c.15-.28.15-.52.1-.72-.05-.2-.18-.33-.36-.47z"/>
+  </svg>
+</a>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mainNav = document.getElementById('main-nav');
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+      mainNav.classList.toggle('show');
+    });
+
+    const navLinks = mainNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('show');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    // Ativa o link conforme a página atual (URL)
+    const currentPage = window.location.pathname.split('/').pop();
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  }
+</script>
+
+
+
+
+
+
+  <!-- Endereço -->
+  <p style="margin: 0; display: flex; align-items: center; gap: 10px; justify-content: center;">
+
+
+
 
 
 <p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;">
-
-
+  <!-- WhatsApp -->
   <svg xmlns="http://www.w3.org/2000/svg" fill="#25D366" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
     <path d="M20.52 3.48A11.875 11.875 0 0012 0C5.373 0 0 5.373 0 12a11.873 11.873 0 001.737 6.02L0 24l6.29-1.654A11.866 11.866 0 0012 24c6.627 0 12-5.373 12-12a11.897 11.897 0 00-3.48-8.52zM12 21.93a9.926 9.926 0 01-5.184-1.463l-.372-.22-3.73.981.996-3.636-.242-.375A9.908 9.908 0 012.07 12c0-5.46 4.44-9.9 9.9-9.9a9.91 9.91 0 019.9 9.9c0 5.46-4.44 9.9-9.9 9.9zm5.187-7.712c-.286-.143-1.693-.837-1.957-.932-.263-.096-.455-.143-.647.143-.19.286-.735.932-.9 1.123-.166.19-.333.214-.62.072-.286-.143-1.207-.444-2.3-1.416-.85-.758-1.423-1.695-1.59-1.981-.166-.286-.018-.44.124-.583.128-.127.286-.333.43-.5.143-.166.19-.286.286-.476.095-.19.048-.357-.024-.5-.072-.143-.647-1.56-.886-2.14-.232-.562-.47-.485-.647-.494l-.552-.01c-.19 0-.5.072-.76.357s-1 1-1 2.43c0 1.43 1.025 2.812 1.168 3.008.143.19 2.02 3.083 4.9 4.318.684.295 1.217.47 1.633.602.684.218 1.308.187 1.8.114.549-.08 1.693-.69 1.933-1.356.238-.666.238-1.237.166-1.356-.072-.095-.263-.143-.55-.286z"/>
   </svg>
   <a href="https://wa.me/5511988605886" target="_blank" rel="noopener noreferrer" style="color: #25D366; font-weight: 700; font-size: 1.1rem;">
-    Clique aqui no WhatsApp: (11) 98860-5886
+    Meu WhatsApp (11) 98860-5886
   </a>
 </p>
-<br>
-<p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;">
 
+<p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;">
+  <!-- Instagram -->
   <svg xmlns="http://www.w3.org/2000/svg" fill="#E4405F" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.976 1.248 2.243 1.31 3.608.058 1.266.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.335 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.335-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.335-2.633 1.31-3.608.975-.975 2.242-1.248 3.608-1.31C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.736 0 8.332.012 7.052.07 5.771.127 4.56.425 3.465 1.52 2.37 2.615 2.072 3.826 2.015 5.107.957 6.387.945 6.79.945 10.053c0 3.265.012 3.669.07 4.948.057 1.281.355 2.492 1.45 3.587 1.095 1.095 2.306 1.393 3.587 1.45 1.279.058 1.683.07 4.948.07 3.263 0 3.667-.012 4.946-.07 1.281-.057 2.492-.355 3.587-1.45 1.095-1.095 1.393-2.306 1.45-3.587.058-1.279.07-1.683.07-4.948 0-3.263-.012-3.667-.07-4.946-.057-1.281-.355-2.492-1.45-3.587C19.438.425 18.227.127 16.946.07 15.666.012 15.263 0 12 0z"/>
     <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998z"/>
     <circle cx="18.406" cy="5.594" r="1.44"/>
   </svg>
   <a href="https://www.instagram.com/rosedouradoestetica/" target="_blank" rel="noopener noreferrer" style="color: #E4405F; font-weight: 700; font-size: 1.1rem;">
-    Clique aqui no Instagram: @rosedouradoestetica
+    Instagram @rosedouradoestetica
   </a>
 </p>
-<br>
-<p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;">
 
+<p style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;">
+  <!-- Facebook -->
   <svg xmlns="http://www.w3.org/2000/svg" fill="#1877F2" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
     <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 
     24h11.495v-9.294H9.691V11.01h3.129V8.414c0-3.1 1.893-4.788 
@@ -404,206 +390,163 @@ body {
     0 1.324-.593 1.324-1.324V1.325C24 .593 23.407 0 22.675 0z"/>
   </svg>
   <a href="https://www.facebook.com/profile.php?id=100089683946160" target="_blank" rel="noopener noreferrer" style="color: #1877F2; font-weight: 700; font-size: 1.1rem;">
-    Clique aqui no Facebook: Rose Dourado Estetica
+    Facebook Rose Dourado Estetica
   </a>
 </p>
+<div style="text-align: center; margin-bottom: 10px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+  <div>
+    <p style="display: inline-flex; align-items: center; gap: 10px; color: #EA4335; font-weight: 700; font-size: 1.1rem; margin: 0;">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="#EA4335" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+      <a href="mailto:rosedouradozumba@gmail.com" style="color:#EA4335; font-weight:700; text-decoration: none;">
+        rosedouradozumba@gmail.com
+      </a>
+    </p>
+  </div>
 
-<br><br>
-  <p><strong style="color: #7a4c1e;">Horário de atendimento:</strong><br>
-    Terça a Sabado: 9h às 18h<br>
-    Domingo a Segunda: Fechado
-  </p>
+  <div>
+    <p style="display: inline-flex; align-items: center; gap: 10px; color: #7a4c1e; font-weight: 700; font-size: 1.1rem; margin: 0;">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="#7a4c1e" viewBox="0 0 24 24" width="24" height="24">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+      </svg>
+      <a href="https://www.google.com/maps/dir//Comercial+-+Av.+Sat%C3%A9lite,+130+-+Jd+Santa+B%C3%A1rbara,+S%C3%A3o+Paulo+-+SP,+08330-480" target="_blank" style="color: #7a4c1e; font-weight: 700; text-decoration: none;">
+        Av. Satélite, 130 - Jd Santa Bárbara, São Paulo - SP
+      </a>
+    </p>
+  </div>
 </div>
 
-<br><br>
 
-<!-- Formulário dúvidas rápidas -->
 
-    
-<form id="contato-form" style="max-width: 800px; margin: 0 auto;">
+
+
+
+<br>
+
+
+</p>
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="https://wa.me/5511988605886" target="_blank" rel="noopener noreferrer" class="btn-agende">
+      Agende agora
+    </a>
+  </div>
+
+
+
+<br>
+      
+  <form id="contato-form" style="max-width: 800px; margin: 0 auto;">
   <label for="nome" style="display:block; margin-bottom:5px; font-weight:bold;">Nome:</label>
   <input type="text" id="nome" name="nome" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
-
   <label for="telefone" style="display:block; margin-bottom:5px; font-weight:bold;">Telefone:</label>
   <input type="tel" id="telefone" name="telefone" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
-
   <label for="servico" style="display:block; margin-bottom:5px; font-weight:bold;">Qual serviço você deseja?</label>
   <select id="servico" name="servico" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
     <option value="" selected>Nenhum selecionado</option>
-    <option value="Estética Facial">Estética Facial</option>
-    <option value="Massagem Drenagem">Massagem Drenagem</option>
-    <option value="Massagem Shiatsu">Massagem Shiatsu</option>
-    <option value="Reflexologia">Reflexologia</option>
-    <option value="Outro">Outro</option>
+    <option value="estetica_facial">Estética Facial</option>
+    <option value="massagem_drenagem">Massagem Drenagem</option>
+    <option value="massagem_shiatsu">Massagem Shiatsu</option>
+    <option value="reflexologia">Reflexologia</option>
+    <option value="outro">Outro</option>
   </select>
-
   <label for="atendimento" style="display:block; margin-bottom:5px; font-weight:bold;">Como prefere ser atendido?</label>
   <select id="atendimento" name="atendimento" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
     <option value="" selected>Nenhum selecionado</option>
-    <option value="Presencial">Presencial</option>
-    <option value="Online">Online</option>
-    <option value="Telefone">Telefone</option>
+    <option value="presencial">Presencial</option>
+    <option value="online">Online</option>
+    <option value="telefonico">Telefone</option>
   </select>
-
   <label for="horario" style="display:block; margin-bottom:5px; font-weight:bold;">Melhor horário para contato:</label>
   <select id="horario" name="horario" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
     <option value="" selected>Nenhum selecionado</option>
-    <option value="Manhã (08:00 - 12:00)">Manhã (08:00 - 12:00)</option>
-    <option value="Tarde (12:00 - 18:00)">Tarde (12:00 - 18:00)</option>
-    <option value="Noite (18:00 - 21:00)">Noite (18:00 - 21:00)</option>
-    <option value="Qualquer horário">Qualquer horário</option>
+    <option value="manha_8_12">Manhã (08:00 - 12:00)</option>
+    <option value="tarde_12_18">Tarde (12:00 - 18:00)</option>
+    <option value="noite_18_21">Noite (18:00 - 21:00)</option>
+    <option value="qualquer_horario">Qualquer horário</option>
   </select>
-
   <label for="conheceu" style="display:block; margin-bottom:5px; font-weight:bold;">Como conheceu nossos serviços?</label>
   <select id="conheceu" name="conheceu" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;">
     <option value="" selected>Nenhum selecionado</option>
-    <option value="Instagram">Instagram</option>
-    <option value="Facebook">Facebook</option>
-    <option value="Indicação">Indicação</option>
-    <option value="Google / Pesquisa">Google / Pesquisa</option>
-    <option value="Outro">Outro</option>
+    <option value="instagram">Instagram</option>
+    <option value="facebook">Facebook</option>
+    <option value="indicação">Indicação</option>
+    <option value="google">Google / Pesquisa</option>
+    <option value="outro">Outro</option>
   </select>
-
   <label for="mensagem" style="display:block; margin-bottom:5px; font-weight:bold;">Mensagem:</label>
   <textarea id="mensagem" name="mensagem" rows="4" style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:4px;"></textarea>
+    <button type="submit" style="background-color:#7a4c1e; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer;">
+      Enviar
+    </button>
+  </form>
+<br><br>          
 
-  <button type="button" id="enviar-whatsapp" style="background-color:#7a4c1e; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer;">
-    Enviar
-  </button>
-</form>
-
-<script>
-  document.getElementById('enviar-whatsapp').addEventListener('click', function () {
-    const nome = document.getElementById('nome').value.trim();
-    const telefone = document.getElementById('telefone').value.trim();
-    const servico = document.getElementById('servico').value;
-    const atendimento = document.getElementById('atendimento').value;
-    const horario = document.getElementById('horario').value;
-    const conheceu = document.getElementById('conheceu').value;
-    const mensagem = document.getElementById('mensagem').value.trim();
-
-    if (!nome || !telefone) {
-      alert('Por favor, preencha nome e telefone.');
-      return;
-    }
-
-const texto = `Olá, gostaria de agendar um serviço:\n` +
-  `*Nome:* ${nome}\n` +
-  `*Telefone:* ${telefone}\n` +
-  `*Serviço desejado:* ${servico}\n` +
-  `*Preferência de atendimento:* ${atendimento}\n` +
-  `*Melhor horário para contato:* ${horario}\n` +
-  `*Como conheceu:* ${conheceu}\n` +
-  `*Mensagem:* ${mensagem}`;
-
-const numero = '5511988605886';
-const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-window.open(url, '_blank');
-
-  });
-</script>
-
-
-<!-- SCRIPT WHATSAPP -->
-<script>
-  document.getElementById('contato-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Impede envio padrão
-
-    const nome = document.getElementById('nome').value.trim();
-    const telefone = document.getElementById('telefone').value.trim();
-    const servico = document.getElementById('servico').value;
-    const atendimento = document.getElementById('atendimento').value;
-    const horario = document.getElementById('horario').value;
-    const conheceu = document.getElementById('conheceu').value;
-    const mensagem = document.getElementById('mensagem').value.trim();
-
-    const texto = `Olá! Gostaria de agendar um serviço.%0A
-*Nome:* ${nome}%0A
-*Telefone:* ${telefone}%0A
-*Serviço desejado:* ${servico}%0A
-*Atendimento:* ${atendimento}%0A
-*Horário para contato:* ${horario}%0A
-*Como conheceu:* ${conheceu}%0A
-*Mensagem:* ${mensagem}`;
-
-    const numero = "5511988605886"; // Número da clínica no formato internacional (sem + ou espaços)
-    const link = `https://wa.me/${numero}?text=${texto}`;
-
-    window.open(link, "_blank"); // Abre o WhatsApp em nova aba
-  });
-</script>
-
+<br><br>
+  </div>
+</section>
+<a href="https://wa.me/5511988605886?text=Olá,%20gostaria%20de%20mais%20informações" 
+   target="_blank" class="whatsapp-button" aria-label="WhatsApp">
   
-  <!--
-    Obs: Para o formulário funcionar, você precisa configurar um backend (PHP, Node.js etc)
-    ou usar um serviço gratuito como Formspree, Google Forms, etc.
-  -->
-</section>
-
-</section>
-
+  <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 
+      0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1
+      c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7
+      l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2
+      0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1
+      34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2
+      c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8
+      -3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3
+      1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5
+      -3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3
+      0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5
+      66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5
+      -5-3.9-10.5-6.6z"/>
+  </svg>
+</a>
 <footer>
   <p>© 2025 Rose Dourado Estética e Massagens — Todos os direitos reservados.</p>
   <p>Beleza, bem-estar e cuidado no site oficial de Rose Dourado</p>
 </footer>
+  <!-- SEUS SCRIPTS -->
 
-<a href="https://wa.me/5511988605886?text=Olá,%20gostaria%20de%20mais%20informações" 
-   target="_blank" class="whatsapp-button" aria-label="WhatsApp">
-  <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path fill="white" d="M380.9 97.1C339 55.1 283.2 32 223.9 32
-      c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480
-      l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1
-      c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157
-      341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72
-      359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2
-      0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2
-      130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5
-      0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2
-      c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5
-      2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5
-      4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8
-      5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8
-      -12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5
-      -3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8
-      6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3
-      19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7
-      94.8 83.8 35.2 15.2 49 16.5 66.6 13.9
-      10.7-1.6 32.8-13.4 37.4-26.4 4.6-13
-      4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-  </svg>
-</a>
 
+
+
+
+
+
+
+
+
+
+<!-- SCRIPT DO FORMULÁRIO PARA WHATSAPP -->
 <script>
-
-
-
-
-
-
-
-  const menuToggle = document.getElementById('menu-toggle');
-  const mainNav = document.getElementById('main-nav');
-
-  menuToggle.addEventListener('click', () => {
-    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', String(!isExpanded));
-    mainNav.classList.toggle('show');
-  });
-
-  mainNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mainNav.classList.remove('show');
-      menuToggle.setAttribute('aria-expanded', 'false');
+  const form = document.getElementById('contato-form');
+  if (form) {
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const servico = document.getElementById('servico').value;
+      const atendimento = document.getElementById('atendimento').value;
+      const horario = document.getElementById('horario').value;
+      const conheceu = document.getElementById('conheceu').value;
+      const mensagem = document.getElementById('mensagem').value.trim();
+      const numeroWhats = '5511988605886'; // substitua pelo seu número com DDD e código do país
+      const texto = 
+`Olá, gostaria de mais informações:
+Nome: ${nome || 'não informado'}
+Telefone: ${telefone || 'não informado'}
+Serviço: ${servico || 'não selecionado'}
+Atendimento: ${atendimento || 'não selecionado'}
+Horário: ${horario || 'não selecionado'}
+Como conheceu: ${conheceu || 'não selecionado'}
+Mensagem: ${mensagem || 'nenhuma'}`;
+      const url = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
     });
-  });
-
-  document.addEventListener('click', (event) => {
-    const clickInside = mainNav.contains(event.target) || menuToggle.contains(event.target);
-    if (!clickInside && mainNav.classList.contains('show')) {
-      mainNav.classList.remove('show');
-      menuToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
+  }
 </script>
 </body>
 </html>
