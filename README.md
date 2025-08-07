@@ -27,9 +27,6 @@ O objetivo foi criar um site **moderno**, **responsivo** e **fácil de navegar**
 - Backend em PHP para coleta e armazenamento de dados via formulário  
 - Criação e manipulação de banco de dados MySQL  
 
-## 🌍 Acesse o site
-🔗 [**Site Rose Dourado Estética**](https://rosedourado.infinityfreeapp.com)
+🌍 **Acesse o site:** [Rose Dourado Estética](https://SEU-LINK-AQUI)
 
----
-
-📌 **Conecte-se comigo no LinkedIn:** [Clique aqui](https://www.linkedin.com/in/wesley-dourado-de-oliveira-b83a75223/)
+📌 **Conecte-se comigo no LinkedIn:** [Meu Perfil](https://www.linkedin.com/in/wesley-dourado-de-oliveira-b83a75223/)
