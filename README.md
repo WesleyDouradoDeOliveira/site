@@ -1,8 +1,5 @@
 # 🌐 Projeto Site Institucional - Rose Dourado Estética
 
-Olá! Eu sou **Wesley Dourado de Oliveira**, estudante de **Ciência da Computação** e desenvolvedor web em formação.
-
-## 📋 Sobre o Projeto
 Este é um site institucional desenvolvido para a clínica **Rose Dourado Estética e Massagens**, focado em estética facial e massagens corporais.
 
 O objetivo foi criar um site **moderno**, **responsivo** e **fácil de navegar**, que apresentasse:
