@@ -6,6 +6,7 @@ O objetivo foi criar um site **moderno**, **responsivo** e **fácil de navegar**
 - Serviços da clínica  
 - Depoimentos de clientes  
 - Formas de contato via **WhatsApp** e **Instagram**
+- Coleta e armazenamento de dados dos clientes por meio do formulário e banco de dados MySQL  
 
 ## 🛠 Tecnologias Utilizadas
 - HTML5  
